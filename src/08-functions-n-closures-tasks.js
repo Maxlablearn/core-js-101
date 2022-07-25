@@ -24,6 +24,7 @@
  *
  */
 function getComposition(f, g) {
+  // eslint-disable-next-line func-names
   return function (x) {
     return f(g(x));
   };
@@ -49,6 +50,7 @@ function getComposition(f, g) {
  *
  */
 function getPowerFunction(exponent) {
+  // eslint-disable-next-line func-names
   return function (x) {
     return x ** exponent;
   };
@@ -90,6 +92,7 @@ function getPolynom() {
 
 function memoize(fun) {
   const cacheMap = new Map();
+  // eslint-disable-next-line func-names
   return function (argum) {
     const args = typeof argum === 'object' ? JSON.stringify(argum) : argum;
     if (cacheMap.has(args)) {
